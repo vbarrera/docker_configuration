@@ -1,4 +1,4 @@
-FROM rocker/rstudio:4.0.0
+FROM rocker/rstudio:4.0.2
 
 MAINTAINER vbarrera@hsph.harvard.edu
 
@@ -28,6 +28,8 @@ RUN apt-get update && \
         default-jre\
 	default-jdk \
 	libjpeg-dev \
+	libglpk-dev \
+	libxt-dev \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN export LD_LIBRARY_PATH=/usr/lib/jvm/default-java/lib/amd64:/usr/lib/jvm/default-java/jre/lib/amd64/server
