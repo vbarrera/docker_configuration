@@ -1,4 +1,4 @@
-FROM rocker/rstudio:latest
+FROM rocker/rstudio:4.2.0
 
 MAINTAINER vbarrera@hsph.harvard.edu
 
@@ -22,13 +22,13 @@ RUN apt-get update && \
 	libssl-dev \
 	libbz2-dev \
 	liblzma-dev \
-	python-pip \
+	python3-pip \
 	libz-dev \
 	libpng-dev \
-	libmariadb-client-lgpl-dev \
         default-jre\
 	default-jdk \
 	libjpeg-dev \
+	libxt6 \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN export LD_LIBRARY_PATH=/usr/lib/jvm/default-java/lib/amd64:/usr/lib/jvm/default-java/jre/lib/amd64/server

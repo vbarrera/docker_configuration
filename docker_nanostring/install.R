@@ -7,7 +7,7 @@ pkgs_to_install <- c("tidyverse","tibble","RCurl",
 "cowplot","scater", "AnnotationHub",
 "ensembldb", "rio","devtools","XLConnect","janitor",
 "pheatmap","DESeq2","reshape","edgeR","tximport","NanoStringQCPro",
-"tidyverse","tibble")
+"NACHO", "NanoStringDiff", "ruv", "RUVSeq")
 
 ## Start the actual installation:
 ok <- BiocManager::install(pkgs_to_install, update=FALSE, ask=FALSE) %in% rownames(installed.packages())
