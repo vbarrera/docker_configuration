@@ -15,10 +15,12 @@ if (!all(ok))
     stop("Failed to install:\n  ",
          paste(pkgs_to_install[!ok], collapse="  \n  "))
 
+install.packages("SeuratObject")
+install.packages('Seurat')
+
 remotes::install_github("immunogenomics/harmony")
 
 # Install Seurat v4
-remotes::install_github("satijalab/seurat")
 remotes::install_github("jlmelville/uwot")
 remotes::install_github("mojaveazure/seurat-disk")
 

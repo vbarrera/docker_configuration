@@ -32,6 +32,8 @@ RUN apt-get update && \
 	libxt-dev \
 	libhdf5-dev \
         libmagick++-6.q16-dev \
+        libgeos-dev \
+        libfftw3-dev \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN export LD_LIBRARY_PATH=/usr/lib/jvm/default-java/lib/amd64:/usr/lib/jvm/default-java/jre/lib/amd64/server
